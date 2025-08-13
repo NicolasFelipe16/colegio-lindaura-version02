@@ -26,7 +26,7 @@ html{
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--color-04);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -120,7 +120,7 @@ header #student-area-icon a{
     padding: 7px 10px;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 header #student-area-icon a:hover {
     transform: translateX(5px);
@@ -154,7 +154,7 @@ header .dropdown .dropdown-list {
     background-color: var(--color-07);
     transform: translateX(0px);
     box-shadow: 0 0 5px var(--color-05);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 header .dropdown button:hover + .dropdown-list,
@@ -345,12 +345,12 @@ header .dropdown .dropdown-list>li a:hover {
     align-items: center;
     gap: 20px;
     border: 1px solid transparent;
-    cursor: pointer;
+    cursor: default;
     padding: 10px 20px;
 }
 
 #professores .teachers-list-item:hover {
-    border-color: var(--color-01);
+    background-color: var(--color-03);
 }
 
 #professores .teachers-list-item img {
@@ -360,9 +360,9 @@ header .dropdown .dropdown-list>li a:hover {
     border-radius: 50%;
 }
 
-#professores .teachers-list-item:hover {
+/* #professores .teachers-list-item:hover {
     transform: scale(1.02);
-}
+} */
 
 #professores .teachers-list-item .teacher-name {
     font-size: 16px;
@@ -392,7 +392,7 @@ header .dropdown .dropdown-list>li a:hover {
     background-color: transparent;
     height: 20px;
     width: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
     cursor: pointer;
@@ -408,7 +408,7 @@ header .dropdown .dropdown-list>li a:hover {
     width: 20px;
     height: 2px;
     background-color: var(--color-01);
-    border-radius: 10px;
+    border-radius: 5px;
     transition: .5s;
 }
 
@@ -531,7 +531,7 @@ header .dropdown .dropdown-list>li a:hover {
 }
 
 #localizacao .map {
-    border-radius: 15px;   
+    border-radius: 5px;
 }
 
 /* #estrutura .section-title {
@@ -623,7 +623,7 @@ header .dropdown .dropdown-list>li a:hover {
     background-color: var(--color-05);
     color: var(--color-02);
     line-height: 18px;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -663,7 +663,7 @@ header .dropdown .dropdown-list>li a:hover {
     /* display: flex; */
     background-color: var(--color-03);
     border: 1px solid var(--color-01);
-    border-radius: 20px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -703,7 +703,7 @@ header .dropdown .dropdown-list>li a:hover {
     padding: 3px 7px;
     /* background-color: var(--color-07); */
     border-left: 2px solid var(--color-05);
-    border-radius: 0 5px 5px 0;
+    /* border-radius: 0 5px 5px 0; */
     white-space: nowrap;
     width: min-content;
     display: block;
@@ -755,7 +755,7 @@ header .dropdown .dropdown-list>li a:hover {
 
 #noticias .news-list-item {
     background-color: var(--color-03);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
 }
 
@@ -861,24 +861,32 @@ header .dropdown .dropdown-list>li a:hover {
 
 #contato {
     background-color: var(--color-05);
+    /* margin-bottom: 100px; */
+}
+
+#contato .container {
+    padding-bottom: 50px;
 }
 
 #contato .section-title {
     color: var(--color-02);
+    margin-bottom: 50px;
 }
 
 #contato #contact-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    text-align: center;
+    gap: 10px;
 }
 
 #contato .contact-list-item {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     color: var(--color-02);
     font-size: 14px;
 }
@@ -889,16 +897,39 @@ header .dropdown .dropdown-list>li a:hover {
 
 footer {
     background-color: var(--color-01);
-    height: 80vh;
+    min-height: 60vh;
 }
 
 footer .container {
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 50px 0;
 }
 
-footer .section-title {
+footer .footer-column {
+    line-height: 30px;
+}
+
+footer .footer-column-item h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: var(--color-02);
+}
+
+footer .footer-column-item p,
+footer .footer-column-item a {
+    font-size: 14px;
+    color: var(--color-03);
+}
+
+footer .footer-column-item a {
+    display: block;
+    text-decoration: underline;
+}
+
+footer .footer-column-item a:hover {
+    transform: translateX(5px);
 }
